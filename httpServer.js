@@ -6,7 +6,7 @@ const restify = require('restify'),
 class HttpServer {
     init() {
         this._restify = restify.createServer();
-
+        this._restify.use(restify.plugins.queryParser());
         this._initControllers();
     }
 
