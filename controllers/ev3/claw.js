@@ -11,7 +11,7 @@ class ClawController {
     _open(req, res) {
         console.log('request query: ', req.params);
         console.log('request foo: ', req.params.foo);
-        socketServer.send('claw', 'open');
+        socketServer.send('claw', req.params);
         res.send(200);
     }
 
