@@ -9,7 +9,7 @@ class ClawController {
     }
 
     _open(req, res) {
-        console.log('request query: ' + req.params);
+        console.log('request query: ', req.params);
         socketServer.send('claw', 'open');
         res.send(200);
     }
