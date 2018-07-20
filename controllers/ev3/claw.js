@@ -10,14 +10,13 @@ class ClawController {
 
     _open(req, res) {
         console.log('request query: ', req.params);
-        console.log('request foo: ', req.params.foo);
         socketServer.send('claw', req.params);
         res.send(200);
     }
 
     _close(req, res) {
-        const params = {'robotId':'gyro boy', 'moveDistance':'100'};
-        socketServer.send('claw', params);
+        console.log('request query: ', req.params);
+        socketServer.send('claw', req.params);
         res.send(200);
     }
 }
