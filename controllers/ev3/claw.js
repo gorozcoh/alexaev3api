@@ -16,7 +16,7 @@ class ClawController {
     }
 
     _close(req, res) {
-        params = {'robotId':'gyro boy', 'moveDistance':'100'};
+        const params = {'robotId':'gyro boy', 'moveDistance':'100'};
         socketServer.send('claw', params);
         res.send(200);
     }
